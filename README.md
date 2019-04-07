@@ -10,8 +10,9 @@
         "value3": value3   
     }   
 
-    2. 'timestamp' provided by the consumer payload can be zero (in future or in past too). If not the case, we just  have   
-        to change the 'is_valid_epochtime' validation in app/main/util/helpers.py. 
+    2. 'timestamp' provided by the consumer payload can be zero (in future or in past too).    
+        If not the case, we just  have to change the 'is_valid_epochtime' validation    
+        in app/main/util/helpers.py. 
 
 
 ### Terminal commands for local testing in sqlite3
@@ -57,17 +58,18 @@
     └── requirements.txt    
 ```
 
-#### Heroku 
-    link : https://pacific-garden-71382.herokuapp.com
+#### Heroku : [View here](https://pacific-garden-71382.herokuapp.com )
+    link : https://pacific-garden-71382.herokuapp.com  
     On heroku postgres db is integrated. 
 
 ### Notes:
-    Authentication module has been added. Currently only /delete/:record_id is secured for testing.  
-    To secure any endpint we need to add decorator @token_required and it should ask for auth token, which    
-    can be obtained by creating any user or loging in any exiting user. Copy from the response.   
+    Authentication module has been added. Currently only /delete/:record_id is secured    
+    for testing. To secure any endpint we need to add decorator @token_required and it should   
+    ask for auth token, which can be obtained by creating any user or loging in any exiting user   
+    and coping from the response.      
 
-    Purposely I am avoiding one-to-one relation between user and records table to keep it simple, for now.
-    Just a matter of adding a foreign and few filters in db calls.  
+    Purposely I am avoiding one-to-one relation between user and records table to keep it simple, 
+    for now. Just a matter of adding a foreign and few filters in db calls.    
  
 ###
     Built with -
