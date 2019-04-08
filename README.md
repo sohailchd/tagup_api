@@ -62,6 +62,13 @@
     link : https://pacific-garden-71382.herokuapp.com  
     On heroku postgres db is integrated. 
 
+    You can use the following creds to login as user and fetch the auth token    
+    required to delete the record using /api/delete/:record_id    
+    email : "test1@gmail.com"    
+    pwd   : "12345"    
+
+    *Note: No end point for creating any admin user, hence list all users doesn't work.     
+
 ### Notes:
     Authentication module has been added. Currently only /delete/:record_id is secured    
     for testing. To secure any endpint we need to add decorator @token_required and it should   
