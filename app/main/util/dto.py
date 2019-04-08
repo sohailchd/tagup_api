@@ -25,7 +25,7 @@ class RecordDto:
         'timestamp': fields.Float(required=True, description='Unix_epoch timestamp of the event.'),
         'value1': fields.Integer(required=True, description='integer value1.'),
         'value2': fields.Float(required=True, description='float value2.'),
-        'value3': fields.Boolean(required=True, description='integer value3.'),
+        'value3': fields.Boolean(required=True, description='boolean value3.'),
     })
 
     public_record = record.inherit('record', {
